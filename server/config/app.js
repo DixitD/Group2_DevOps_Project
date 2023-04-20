@@ -1,8 +1,3 @@
-/*<!--     Author- Dixit Hihoriya   -->
-<!--       StudentID-301201312      -->
-<!--       FileName-app.js          -->
-<!--       WebApp Name: MidTerm COMP229          -->*/
-
 // moddules for node and express
 let createError = require('http-errors');
 let express = require('express');

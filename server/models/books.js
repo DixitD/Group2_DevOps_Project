@@ -1,8 +1,3 @@
-/*<!--     Author- Dixit Hihoriya   -->
-<!--       StudentID-301201312      -->
-<!--       FileName-books.js.js     -->
-<!--       WebApp Name: MidTerm COMP229          -->*/
-
 let mongoose = require('mongoose');
 
 // create a model class
