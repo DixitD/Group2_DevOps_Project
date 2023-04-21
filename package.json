@@ -5,8 +5,6 @@
   "scripts": {
     "start": "node server.js",
     "build": "npm install && npm run build-assets && npm run build-css",
-    "build-assets": "webpack --mode=production",
-    "build-css": "node-sass --output-style compressed --output public/stylesheets/ public/stylesheets/"
   },
   "description": "## Welcome to the MidTerm Project - the Favourite Book List App",
   "main": "server.js",
