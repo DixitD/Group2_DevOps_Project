@@ -11,7 +11,12 @@ pipeline {
         {
             steps {
                     sh 'npm run build'
-                    archiveArtifacts artifacts: 'public/**/*, src/**/*'
+                    //archiveArtifacts artifacts: 'public/**/*, src/**/*'
+            }
+        }
+        stage('Archive') {
+            steps {
+                archiveArtifacts 'build/**'
             }
         }
         stage('Run npm coverage')
