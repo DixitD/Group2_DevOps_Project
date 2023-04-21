@@ -14,12 +14,6 @@ pipeline {
                     //archiveArtifacts artifacts: 'public/**/*, src/**/*'
             }
         }
-        stage('Archive Artifacts') {
-            steps {
-                archiveArtifacts 'build/**'
-                publishArtifacts artifacts: 'build/**', serverName: 'Jenkins', includes: '**'
-            }
-        }
         stage('Test')
         {
             steps {
@@ -38,26 +32,31 @@ pipeline {
                     sh 'npm run lint'
             }
         }
-        stage('Development') {
+        stage('Deliver Artifacts') {
+            steps {
+                archiveArtifacts 'build/**'
+            }
+        }
+        stage('Deploy to Dev Env') {
            steps {
                echo "Deliver started to Dev Env"
                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
            }
         }
         
-        stage('QAT') {
+        stage('Deploy to QAT Env') {
             steps {
                echo "Deliver started to QAT Env"
            }
         }
         
-        stage('Staging') {
+        stage('Deploy to Staging Env') {
             steps {
                echo "Deploy to Staging Env"
            }
         }
         
-        stage('Production') {
+        stage('Deploy to Production Env') {
             steps {
                echo "Deploy to Production Env"
                input message: 'Finished production stage of web site? (Click "Proceed" to continue)' 
