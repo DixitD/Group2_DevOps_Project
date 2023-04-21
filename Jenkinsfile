@@ -11,10 +11,15 @@ pipeline {
         {
             steps {
                     sh 'npm run build'
-                    sh 'npm run coverage'
                     archiveArtifacts artifacts: 'public/**/*, src/**/*'
             }
         }
+        stage('Run npm coverage')
+        {
+            steps {
+                    sh 'npm run coverage'
+            }
+        }      
         stage('Run npm test')
         {
             steps {
