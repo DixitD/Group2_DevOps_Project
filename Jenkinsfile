@@ -31,15 +31,6 @@ pipeline {
                  sh 'npm run coverage'
             }
         }
-        post {
-            always {
-                junit 'reports/**/*.xml'
-                cobertura 'coverage/cobertura-coverage.xml'
-                // Code analysis can be done using plugins like Checkstyle or PMD
-                // checkstyle 'reports/checkstyle.xml'
-                // pmd 'reports/pmd.xml'
-           }
-        }
     }
 }
 
