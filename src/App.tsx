@@ -1,6 +1,6 @@
 import  { useState } from "react";
 import "./App.css";
-import { Navigate, Route, Routes } from "react-router-dom";
+import {BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import { Comment } from "./component/Comment";
 import { Login } from "./component/Login";
 import { Thankyou } from "./component/Thankyou";
@@ -17,12 +17,14 @@ const onChangeE = (email:string)=>{
 }
   return (
     <div className="App">
+       <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/comment" element={<Comment onChangeC={onChangeC} onChangeE={onChangeE}  />} />
         <Route path="/thankyou" element={<Thankyou comment = {comments} email={email} />} />
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
+      </Router>
     </div>
   );
 }
