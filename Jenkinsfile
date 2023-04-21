@@ -12,7 +12,6 @@ pipeline {
             steps {
                     sh 'npm run build'
                     archiveArtifacts artifacts: 'public/**/*, src/**/*'
-                    publishArtifacts artifacts: 'public/**/*, src/**/*', destination: '/var/www/html'
             }
         }
         stage('Run npm test')
