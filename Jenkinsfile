@@ -7,28 +7,35 @@ pipeline {
             }
         }
 
-        stage('Run npm Build')
+        stage('Build')
         {
             steps {
                     sh 'npm run build'
                     //archiveArtifacts artifacts: 'public/**/*, src/**/*'
             }
         }
-        stage('Archive') {
+        stage('Archive Artifacts') {
             steps {
                 archiveArtifacts 'build/**'
+                publishArtifacts artifacts: 'build/**', serverName: 'Jenkins', includes: '**'
             }
         }
-        stage('Run npm coverage')
+        stage('Test')
+        {
+            steps {
+                 sh 'npm run test'
+            }
+        }
+        stage('Code coverage')
         {
             steps {
                     sh 'npm run coverage'
             }
-        }      
-        stage('Run npm test')
+        }
+        stage('Code Analysis')
         {
             steps {
-                 sh 'npm run test'
+                    sh 'npm run lint'
             }
         }
         stage('Development') {
