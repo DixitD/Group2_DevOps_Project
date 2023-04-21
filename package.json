@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "build": "npm install"
+    "build": "npm install",
+    "lint": "eslint ."
   },
   "description": "## Welcome to the MidTerm Project - the Favourite Book List App",
   "main": "server.js",
