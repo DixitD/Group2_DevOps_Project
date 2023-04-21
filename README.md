@@ -1,40 +1,46 @@
-# COMP229-Final Project
+# Getting Started with Create React App
 
-## Final Project - Favorite Book List App
-This is a simple web application that allows users to keep track of their favorite books.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
+In the project directory, you can run:
 
-## Features
-- Users can add new books to their favorite book list.
-- Users can remove books from their favorite book list.
-- Users can view their favorite book list and the details of each book.
+### `npm start`
 
-## Technologies
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This project was built using the following technologies:
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- HTML
-- CSS
-- JavaScript
-- Express js
+### `npm test`
 
-## Installation
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-To install this project, simply clone this repository:
-```
-git clone git@github.com:DixitD/Group2_DevOps_Project.git
-```
+### `npm run build`
 
-please use **`npm install`** to install project dependencies
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Usage
-- To add a new book to your favorite book list, enter the book title, author, and year published in the form fields and click the "Add Book" button.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- To remove a book from your favorite book list, click the "Remove" button next to the book in the list.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- To view the details of a book, click the book title in the list. This will display the book's author and year published.
+### `npm run eject`
 
-## Credits
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-This project was created by Dixit Hihoriya and Aryan Patel
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
