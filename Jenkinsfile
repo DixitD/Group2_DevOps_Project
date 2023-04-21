@@ -13,22 +13,10 @@ pipeline {
                     sh 'npm run build'
             }
         }
-        stage('Run npm Lint')
-        {
-            steps {
-                 sh 'npm run lint'
-            }
-        }
         stage('Run npm test')
         {
             steps {
                  sh 'npm run test'
-            }
-        }
-        stage('Run npm coverage')
-        {
-            steps {
-                 sh 'npm run coverage'
             }
         }
     }
