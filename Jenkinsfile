@@ -11,6 +11,7 @@ pipeline {
         {
             steps {
                     sh 'npm run build'
+                    sh 'npm run coverage'
                     archiveArtifacts artifacts: 'public/**/*, src/**/*'
             }
         }
